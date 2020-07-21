@@ -50,7 +50,7 @@ impl Timestamp {
         let mut negative_hundredth_second = c.get(6).is_some();
         let hundredth_second = match c.get(7) {
             Some(n) => {
-                let n = n.as_str().parse::<u8>().unwrap();
+                let n = n.as_str().parse::<u32>().unwrap();
 
                 if n == 0 {
                     negative_hundredth_second = false;
